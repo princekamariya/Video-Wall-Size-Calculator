@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd E:/Learn/goodspeed/backend && npm install 2>&1)",
+      "Bash(cd E:/Learn/goodspeed/frontend && npm install 2>&1)",
+      "Bash(cd E:/Learn/goodspeed/frontend && npm run build 2>&1)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd:*)",
+      "Bash(curl:*)",
+      "Bash(ping:*)",
+      "Bash(cd:*)",
+      "Bash(gh auth:*)",
+      "Bash(where gh:*)",
+      "Bash(powershell:*)",
+      "Bash(cd E:/Learn/goodspeed && git push -u origin master 2>&1)",
+      "Bash(cd E:/Learn/goodspeed/frontend && npm uninstall axios 2>&1)"
+    ]
+  }
+}

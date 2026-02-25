@@ -4,31 +4,14 @@ A full-stack application that calculates the closest lower and upper LED cabinet
 
 ## Tech Stack
 - **Frontend**: React 18 + Vite
-- **Backend**: Node.js + Express
 
-## Quick Start
-
-### 1. Install dependencies
-
-```bash
-# Backend
-cd backend && npm install
-
-# Frontend
-cd ../frontend && npm install
-```
 
 ### 2. Run development servers
-
-**Terminal 1 — Backend (port 4000)**
-```bash
-cd backend
-npm run dev
-```
 
 **Terminal 2 — Frontend (port 3000)**
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
 
