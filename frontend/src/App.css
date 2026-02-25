@@ -33,6 +33,16 @@
 
 @media (max-width: 860px) {
   .app-main { grid-template-columns: 1fr; }
+
+  /* Hide placeholder on mobile — no value without a results panel beside it */
+  .results-placeholder { display: none; }
+
+  /* When results exist: hide input panel, show only results with clean background */
+  .app-main.has-results .input-panel { display: none; }
+  .app-main.has-results .results-panel {
+    background: transparent;
+    padding: 0;
+  }
 }
 
 /* ─── Input panel ────────────────────────────────────────────────────────── */
@@ -430,6 +440,30 @@
   font-size: 0.9rem;
   color: var(--text);
   line-height: 1.6;
+}
+
+/* ─── Mobile back button ─────────────────────────────────────────────────── */
+
+.mobile-back-bar { display: none; }
+
+@media (max-width: 860px) {
+  .mobile-back-bar {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .back-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: border-color 0.15s;
+  }
+
+  .back-btn:hover { border-color: var(--accent); color: var(--accent); }
 }
 
 /* ─── Placeholder / loading ──────────────────────────────────────────────── */

@@ -95,7 +95,7 @@ export default function App() {
         </p>
       </header>
 
-      <main className="app-main">
+      <main className={`app-main${results ? ' has-results' : ''}`}>
         {/* ── Left panel: inputs ── */}
         <section className="input-panel">
           <CabinetSelector value={cabinetType} onChange={(v) => { setCabinetType(v); reset(); }} />
@@ -138,6 +138,9 @@ export default function App() {
         <section className="results-panel">
           {results ? (
             <>
+              <div className="mobile-back-bar">
+                <button className="back-btn" onClick={reset}>← Back</button>
+              </div>
               <h2 className="results-title">Results</h2>
               <div className="results-grid">
                 <ResultCard
