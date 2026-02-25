@@ -1,14 +1,14 @@
 # Video Wall Size Calculator
 
-A full-stack application that calculates the closest lower and upper LED cabinet configurations for a video wall based on user-selected parameters.
+Application that calculates the closest lower and upper LED cabinet configurations for a video wall based on user-selected parameters.
 
 ## Tech Stack
 - **Frontend**: React 18 + Vite
 
 
-### 2. Run development servers
+### Run development servers
 
-**Terminal 2 — Frontend (port 3000)**
+**Terminal —> Frontend (port 3000)**
 ```bash
 cd frontend
 npm install
@@ -49,7 +49,7 @@ Then open **http://localhost:3000** in your browser.
 
 mm · m · ft · in — values convert automatically when the unit is changed.
 
-## Edge Cases Handled
+## Assumptions Considered & Handled
 
 - No exact aspect ratio achievable (e.g. 1:1 cabinets targeting 16:9 wall AR)
 - Very small sizes (no lower config exists → lower = null)
