@@ -36,8 +36,14 @@
     grid-template-columns: 1fr;
   }
 
-  /* Hide placeholder on mobile — no value without a results panel beside it */
-  .results-placeholder {
+  /* Remove sticky so the input panel scrolls naturally on mobile */
+  .input-panel {
+    position: static;
+  }
+
+  /* No results yet: hide the entire results panel — it has min-height 400px
+     which creates dead scroll space on mobile */
+  .app-main:not(.has-results) .results-panel {
     display: none;
   }
 
@@ -49,6 +55,7 @@
   .app-main.has-results .results-panel {
     background: transparent;
     padding: 0;
+    min-height: unset;
   }
 }
 
