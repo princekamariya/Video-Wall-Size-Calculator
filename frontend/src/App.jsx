@@ -19,7 +19,7 @@ export default function App() {
     diagonal: '',
   });
 
-  const { results, loading, error, calculate, selectedResult, setSelectedResult, reset } = useCalculator();
+  const { results, error, calculate, selectedResult, setSelectedResult, reset } = useCalculator();
 
   // ── handlers ───────────────────────────────────────────────────────────────
 
@@ -111,10 +111,10 @@ export default function App() {
           <button
             type="button"
             className="calculate-btn"
-            disabled={!canCalculate() || loading}
+            disabled={!canCalculate()}
             onClick={handleCalculate}
           >
-            {loading ? 'Calculating…' : 'Calculate'}
+            Calculate
           </button>
 
           {error && <div className="error-banner">{error}</div>}
@@ -160,14 +160,11 @@ export default function App() {
               )}
             </>
           ) : (
-            !loading && (
               <div className="results-placeholder">
                 <div className="placeholder-icon">⬛⬛<br />⬛⬛</div>
                 <p>Configure inputs on the left and click <strong>Calculate</strong> to see configurations.</p>
               </div>
-            )
           )}
-          {loading && <div className="loading-spinner">Calculating configurations…</div>}
         </section>
       </main>
     </div>
